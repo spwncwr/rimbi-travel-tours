@@ -1,261 +1,436 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Rimbi Travel & Tours | Travel Beyond Boundaries</title>
+    <title>Rimbi Travel & Tours</title>
 
     <meta
         name="description"
-        content="Rimbi Travel & Tours — reliable passenger transport, private coach hire and shuttle services."
+        content="Rimbi Travel & Tours — reliable travel and transportation services."
     >
+</head>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<body>
 
-        html {
-            scroll-behavior: smooth;
-        }
+    <!-- HEADER -->
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f7f7f5;
-            color: #171717;
-            line-height: 1.6;
-        }
+    <header>
 
-        a {
-            text-decoration: none;
-            color: inherit;
-        }
+        <nav>
 
-        img {
-            max-width: 100%;
-            display: block;
-        }
+            <a href="index.html">
+                RIMBI
+            </a>
 
-        /* =========================
-           NAVIGATION
-        ========================= */
+            <div>
+                <a href="#home">Home</a>
+                <a href="#routes">Routes</a>
+                <a href="#services">Services</a>
+                <a href="#fleet">Fleet</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </div>
 
-        header {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            z-index: 1000;
-            background: rgba(10, 10, 10, 0.92);
-            backdrop-filter: blur(12px);
-        }
+            <a href="#booking">
+                Book Now
+            </a>
 
-        .nav {
-            max-width: 1200px;
-            margin: auto;
-            height: 78px;
-            padding: 0 24px;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+        </nav>
 
-        .logo {
-            color: white;
-            font-size: 28px;
-            font-weight: 900;
-            letter-spacing: 3px;
-        }
+    </header>
 
-        .logo span {
-            color: #e7b84b;
-        }
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            align-items: center;
-        }
+    <!-- HERO SECTION -->
 
-        .nav-links a {
-            color: #fff;
-            font-size: 14px;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+    <main>
 
-        .nav-links a:hover {
-            color: #e7b84b;
-        }
+        <section id="home">
 
-        .book-btn {
-            background: #e7b84b;
-            color: #111 !important;
-            padding: 12px 20px;
-            border-radius: 5px;
-            font-weight: 800 !important;
-        }
+            <p>RIMBI TRAVEL & TOURS</p>
 
-        .book-btn:hover {
-            background: #fff;
-        }
+            <h1>
+                Travel Beyond Boundaries.
+            </h1>
 
-        /* =========================
-           HERO
-        ========================= */
+            <p>
+                Reliable journeys. Comfortable travel.
+                Professional service.
+            </p>
 
-        .hero {
-            min-height: 760px;
-            padding: 150px 24px 100px;
-            position: relative;
-            display: flex;
-            align-items: center;
-            overflow: hidden;
-            background:
-                linear-gradient(
-                    90deg,
-                    rgba(0, 0, 0, 0.90),
-                    rgba(0, 0, 0, 0.60),
-                    rgba(0, 0, 0, 0.25)
-                ),
-                url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=85")
-                center/cover;
-        }
+            <a href="#booking">
+                Book Your Journey
+            </a>
 
-        .hero-content {
-            max-width: 1200px;
-            width: 100%;
-            margin: auto;
-            color: white;
-        }
+            <a href="#routes">
+                Explore Routes
+            </a>
 
-        .hero-tag {
-            color: #e7b84b;
-            font-size: 14px;
-            font-weight: 800;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            margin-bottom: 20px;
-        }
+        </section>
 
-        .hero h1 {
-            font-size: clamp(48px, 7vw, 88px);
-            line-height: 0.98;
-            max-width: 850px;
-            margin-bottom: 25px;
-            letter-spacing: -3px;
-        }
 
-        .hero h1 span {
-            color: #e7b84b;
-        }
+        <!-- BOOKING SEARCH -->
 
-        .hero p {
-            max-width: 620px;
-            font-size: 19px;
-            color: #e5e5e5;
-            margin-bottom: 38px;
-        }
+        <section id="booking">
 
-        .hero-actions {
-            display: flex;
-            gap: 15px;
-            flex-wrap: wrap;
-        }
+            <h2>
+                Find Your Journey
+            </h2>
 
-        .primary-btn,
-        .secondary-btn {
-            display: inline-block;
-            padding: 15px 25px;
-            border-radius: 5px;
-            font-weight: 800;
-            transition: 0.3s;
-        }
+            <form>
 
-        .primary-btn {
-            background: #e7b84b;
-            color: #111;
-        }
+                <label for="from">
+                    From
+                </label>
 
-        .primary-btn:hover {
-            background: white;
-            transform: translateY(-2px);
-        }
+                <select id="from" name="from">
 
-        .secondary-btn {
-            border: 1px solid rgba(255,255,255,0.5);
-            color: white;
-        }
+                    <option value="harare">
+                        Harare
+                    </option>
 
-        .secondary-btn:hover {
-            background: white;
-            color: #111;
-        }
+                    <option value="mutare">
+                        Mutare
+                    </option>
 
-        /* =========================
-           SEARCH BOX
-        ========================= */
+                    <option value="rushinga">
+                        Rushinga
+                    </option>
 
-        .search-wrapper {
-            max-width: 1200px;
-            margin: -65px auto 0;
-            position: relative;
-            z-index: 10;
-            padding: 0 24px;
-        }
+                </select>
 
-        .search-box {
-            background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 15px 50px rgba(0,0,0,0.14);
-        }
 
-        .search-title {
-            font-size: 14px;
-            font-weight: 800;
-            margin-bottom: 18px;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
+                <label for="to">
+                    To
+                </label>
 
-        .search-form {
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 0.7fr auto;
-            gap: 12px;
-        }
+                <select id="to" name="to">
 
-        .field {
-            border: 1px solid #ddd;
-            padding: 13px 15px;
-            border-radius: 5px;
-            background: #fafafa;
-        }
+                    <option value="mutare">
+                        Mutare
+                    </option>
 
-        .field label {
-            display: block;
-            font-size: 11px;
-            color: #777;
-            text-transform: uppercase;
-            font-weight: 700;
-            margin-bottom: 4px;
-        }
+                    <option value="harare">
+                        Harare
+                    </option>
 
-        .field input,
-        .field select {
-            width: 100%;
-            border: none;
-            outline: none;
-            background: transparent;
-            font-size: 15px;
-            font-weight: 600;
-        }
+                    <option value="rushinga">
+                        Rushinga
+                    </option>
 
-        .search-button {
-            border: none;
-            background: #111;
-            color: white;
-            padding: 0 25
+                </select>
+
+
+                <label for="date">
+                    Travel Date
+                </label>
+
+                <input
+                    type="date"
+                    id="date"
+                    name="date"
+                >
+
+
+                <label for="passengers">
+                    Passengers
+                </label>
+
+                <input
+                    type="number"
+                    id="passengers"
+                    name="passengers"
+                    min="1"
+                    value="1"
+                >
+
+
+                <button type="submit">
+                    Search Journey
+                </button>
+
+            </form>
+
+        </section>
+
+
+        <!-- ROUTES -->
+
+        <section id="routes">
+
+            <p>POPULAR ROUTES</p>
+
+            <h2>
+                Where are you going?
+            </h2>
+
+            <p>
+                Explore selected routes associated with
+                Rimbi Travel & Tours.
+            </p>
+
+
+            <article>
+
+                <h3>
+                    Harare → Mutare
+                </h3>
+
+                <p>
+                    Regular passenger service.
+                </p>
+
+                <a href="#booking">
+                    Book this route
+                </a>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                    Mutare → Harare
+                </h3>
+
+                <p>
+                    Regular passenger service.
+                </p>
+
+                <a href="#booking">
+                    Book this route
+                </a>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                    Harare → Rushinga
+                </h3>
+
+                <p>
+                    Regular passenger service.
+                </p>
+
+                <a href="#booking">
+                    Book this route
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- SERVICES -->
+
+        <section id="services">
+
+            <p>OUR SERVICES</p>
+
+            <h2>
+                Transport built around you.
+            </h2>
+
+
+            <article>
+
+                <h3>
+                    Public Bus Service
+                </h3>
+
+                <p>
+                    Passenger transportation on selected routes.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                    Private Coach Hire
+                </h3>
+
+                <p>
+                    Private transportation for companies,
+                    schools, groups and events.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                    Shuttle Services
+                </h3>
+
+                <p>
+                    Flexible transportation solutions for groups.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- WHY RIMBI -->
+
+        <section id="about">
+
+            <p>WHY RIMBI</p>
+
+            <h2>
+                More than a journey.
+            </h2>
+
+            <p>
+                Rimbi Travel & Tours focuses on dependable
+                transportation and customer experience.
+            </p>
+
+
+            <article>
+
+                <h3>
+                    Safety
+                </h3>
+
+                <p>
+                    A strong focus on passenger and vehicle safety.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                    Professional Service
+                </h3>
+
+                <p>
+                    Professional transportation services
+                    for individuals and groups.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                    Fleet Monitoring
+                </h3>
+
+                <p>
+                    Vehicle monitoring technology supports
+                    operational visibility.
+                </p>
+
+            </article>
+
+
+            <article>
+
+                <h3>
+                    Customer Focus
+                </h3>
+
+                <p>
+                    Transport solutions designed around
+                    passenger needs.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- FLEET -->
+
+        <section id="fleet">
+
+            <p>OUR FLEET</p>
+
+            <h2>
+                Built for the road.
+            </h2>
+
+            <p>
+                Rimbi provides bus and coach transportation
+                for passenger and group travel.
+            </p>
+
+        </section>
+
+
+        <!-- CONTACT CTA -->
+
+        <section>
+
+            <h2>
+                Your journey starts here.
+            </h2>
+
+            <p>
+                Planning your next trip?
+                Get in touch with Rimbi Travel & Tours.
+            </p>
+
+            <a href="#contact">
+                Contact Rimbi
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer id="contact">
+
+        <h2>
+            RIMBI
+        </h2>
+
+        <p>
+            Travel Beyond Boundaries.
+        </p>
+
+        <h3>
+            Contact
+        </h3>
+
+        <p>
+            8 Orme Road, New Ardbennie,
+            Harare, Zimbabwe
+        </p>
+
+        <p>
+            +263 715 159 986
+        </p>
+
+        <p>
+            +263 772 998 793
+        </p>
+
+        <p>
+            info@rimbitours.co.zw
+        </p>
+
+        <p>
+            © 2026 Rimbi Travel & Tours.
+            All rights reserved.
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
