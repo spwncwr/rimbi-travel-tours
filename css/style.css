@@ -1,1 +1,675 @@
 
+/* =========================
+   RIMBI TRAVEL & TOURS
+   MAIN STYLESHEET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f7f5;
+    color: #151515;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    background: rgba(10, 10, 10, 0.94);
+    backdrop-filter: blur(12px);
+}
+
+nav {
+    max-width: 1200px;
+    height: 78px;
+    margin: auto;
+    padding: 0 24px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav > a:first-child {
+    color: white;
+    font-size: 28px;
+    font-weight: 900;
+    letter-spacing: 3px;
+}
+
+nav > div {
+    display: flex;
+    gap: 28px;
+}
+
+nav > div a {
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+nav > div a:hover {
+    color: #e6b84a;
+}
+
+nav > a:last-child {
+    background: #e6b84a;
+    color: #111;
+
+    padding: 12px 20px;
+    border-radius: 5px;
+
+    font-size: 14px;
+    font-weight: 800;
+
+    transition: 0.3s ease;
+}
+
+nav > a:last-child:hover {
+    background: white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+#home {
+    min-height: 760px;
+
+    padding: 160px 24px 120px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    color: white;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 0, 0, 0.88),
+            rgba(0, 0, 0, 0.60),
+            rgba(0, 0, 0, 0.25)
+        ),
+        url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+}
+
+#home p:first-child {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 20px;
+
+    color: #e6b84a;
+
+    font-size: 13px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+#home h1 {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 25px;
+
+    font-size: clamp(48px, 7vw, 88px);
+    line-height: 0.98;
+    letter-spacing: -4px;
+}
+
+#home p:nth-of-type(2) {
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto 35px;
+
+    color: #e5e5e5;
+
+    font-size: 19px;
+}
+
+#home > a {
+    display: inline-block;
+
+    padding: 15px 25px;
+    border-radius: 5px;
+
+    font-weight: 800;
+
+    margin-right: 10px;
+}
+
+#home > a:first-of-type {
+    max-width: fit-content;
+
+    margin-left: max(0px, calc((100% - 1200px) / 2));
+
+    background: #e6b84a;
+    color: #111;
+}
+
+#home > a:last-of-type {
+    max-width: fit-content;
+
+    margin-left: max(0px, calc((100% - 1200px) / 2));
+
+    border: 1px solid rgba(255,255,255,0.5);
+    color: white;
+}
+
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+main section:not(#home) {
+    padding: 100px 24px;
+}
+
+main section:not(#home) > * {
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main section:not(#home) > p:first-child {
+    color: #a67d20;
+
+    font-size: 13px;
+    font-weight: 800;
+
+    letter-spacing: 3px;
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+main section:not(#home) h2 {
+    font-size: clamp(35px, 5vw, 58px);
+    line-height: 1.05;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   BOOKING
+========================= */
+
+#booking {
+    background: white;
+
+    margin-top: -65px;
+
+    position: relative;
+    z-index: 10;
+
+    max-width: 1150px;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,0.14);
+}
+
+#booking h2 {
+    font-size: 18px !important;
+
+    letter-spacing: 0 !important;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px !important;
+}
+
+#booking form {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr 1fr 0.7fr auto;
+
+    gap: 12px;
+
+    align-items: end;
+}
+
+#booking label {
+    display: block;
+
+    font-size: 11px;
+
+    color: #777;
+
+    text-transform: uppercase;
+
+    font-weight: 700;
+
+    margin-bottom: 5px;
+}
+
+#booking select,
+#booking input {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #ddd;
+
+    border-radius: 5px;
+
+    background: #fafafa;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+#booking button {
+    border: none;
+
+    background: #111;
+    color: white;
+
+    padding: 15px 25px;
+
+    border-radius: 5px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+#booking button:hover {
+    background: #e6b84a;
+    color: #111;
+}
+
+
+/* =========================
+   ROUTES
+========================= */
+
+#routes {
+    background: white;
+
+    padding-top: 130px !important;
+}
+
+#routes > p:nth-of-type(2) {
+    color: #666;
+
+    font-size: 17px;
+
+    margin-bottom: 45px;
+}
+
+#routes article {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: calc(33.333% - 16px);
+
+    margin-right: 18px;
+
+    padding: 30px;
+
+    border: 1px solid #e3e3e3;
+
+    border-radius: 10px;
+
+    transition: 0.3s ease;
+}
+
+#routes article:last-child {
+    margin-right: 0;
+}
+
+#routes article:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 15px 35px rgba(0,0,0,0.08);
+}
+
+#routes article h3 {
+    font-size: 23px;
+
+    margin-bottom: 12px;
+}
+
+#routes article p {
+    color: #777;
+
+    font-size: 14px;
+
+    margin-bottom: 20px;
+}
+
+#routes article a {
+    color: #a67d20;
+
+    font-weight: 800;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   SERVICES
+========================= */
+
+#services {
+    background: #111;
+
+    color: white;
+}
+
+#services > p:nth-of-type(2) {
+    color: #aaa;
+
+    font-size: 17px;
+
+    margin-bottom: 45px;
+}
+
+#services article {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: calc(33.333% - 16px);
+
+    margin-right: 18px;
+
+    padding: 35px;
+
+    border: 1px solid #333;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+#services article:last-child {
+    margin-right: 0;
+}
+
+#services article:hover {
+    border-color: #e6b84a;
+
+    transform: translateY(-5px);
+}
+
+#services article h3 {
+    font-size: 22px;
+
+    margin-bottom: 12px;
+}
+
+#services article p {
+    color: #aaa;
+
+    font-size: 15px;
+}
+
+
+/* =========================
+   ABOUT / WHY RIMBI
+========================= */
+
+#about {
+    background: #f7f7f5;
+}
+
+#about > p:nth-of-type(2) {
+    color: #666;
+
+    font-size: 17px;
+
+    margin-bottom: 45px;
+}
+
+#about article {
+    display: inline-block;
+
+    vertical-align: top;
+
+    width: calc(25% - 18px);
+
+    margin-right: 18px;
+
+    padding: 25px 0;
+
+    border-top: 2px solid #ddd;
+}
+
+#about article:last-child {
+    margin-right: 0;
+}
+
+#about article h3 {
+    font-size: 20px;
+
+    margin-bottom: 10px;
+}
+
+#about article p {
+    color: #777;
+
+    font-size: 14px;
+}
+
+
+/* =========================
+   FLEET
+========================= */
+
+#fleet {
+    background: #e9e9e5;
+
+    min-height: 500px;
+}
+
+#fleet > p:nth-of-type(2) {
+    color: #666;
+
+    font-size: 17px;
+
+    max-width: 650px;
+}
+
+
+/* =========================
+   CTA
+========================= */
+
+main > section:last-of-type {
+    background: #e6b84a;
+
+    text-align: center;
+}
+
+main > section:last-of-type h2 {
+    max-width: none !important;
+
+    font-size: clamp(40px, 6vw, 65px) !important;
+}
+
+main > section:last-of-type p {
+    color: #40361f;
+
+    margin-bottom: 30px;
+}
+
+main > section:last-of-type a {
+    display: inline-block;
+
+    background: #111;
+    color: white;
+
+    padding: 16px 30px;
+
+    border-radius: 5px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #090909;
+
+    color: white;
+
+    padding: 70px 24px 30px;
+}
+
+footer h2 {
+    font-size: 28px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 12px;
+}
+
+footer p {
+    color: #999;
+
+    max-width: 500px;
+
+    margin-bottom: 10px;
+}
+
+footer h3 {
+    color: white;
+
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+    nav > div {
+        display: none;
+    }
+
+    #booking form {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #routes article,
+    #services article {
+        width: calc(50% - 12px);
+
+        margin-bottom: 20px;
+    }
+
+    #about article {
+        width: calc(50% - 12px);
+
+        margin-bottom: 20px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    nav {
+        height: 70px;
+    }
+
+    nav > a:first-child {
+        font-size: 23px;
+    }
+
+    nav > a:last-child {
+        padding: 10px 14px;
+    }
+
+    #home {
+        min-height: 680px;
+
+        padding-top: 130px;
+    }
+
+    #home h1 {
+        font-size: 50px;
+
+        letter-spacing: -2px;
+    }
+
+    #home > a {
+        display: block;
+
+        margin-left: 0 !important;
+
+        margin-bottom: 12px;
+    }
+
+    #booking {
+        margin: 20px 15px 0;
+
+        padding: 20px;
+    }
+
+    #booking form {
+        grid-template-columns: 1fr;
+    }
+
+    #routes article,
+    #services article,
+    #about article {
+        width: 100%;
+
+        margin-right: 0;
+    }
+
+    main section:not(#home) {
+        padding: 75px 20px;
+    }
+}
