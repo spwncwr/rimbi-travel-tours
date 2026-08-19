@@ -1,8 +1,12 @@
-
-/* =========================
+/* =========================================================
    RIMBI TRAVEL & TOURS
-   MAIN STYLESHEET
-========================= */
+   FUTURISTIC WEBSITE DESIGN
+========================================================= */
+
+
+/* =========================================================
+   GLOBAL RESET
+========================================================= */
 
 * {
     margin: 0;
@@ -10,21 +14,25 @@
     box-sizing: border-box;
 }
 
+
 html {
     scroll-behavior: smooth;
 }
 
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #f7f7f5;
-    color: #151515;
+    background: #f7f8fa;
+    color: #101828;
     line-height: 1.6;
 }
+
 
 a {
     color: inherit;
     text-decoration: none;
 }
+
 
 img {
     max-width: 100%;
@@ -32,191 +40,466 @@ img {
 }
 
 
-/* =========================
-   HEADER
-========================= */
-
-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-
-    background: rgba(10, 10, 10, 0.94);
-    backdrop-filter: blur(12px);
+button,
+input,
+select {
+    font: inherit;
 }
 
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    background: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid #e5e7eb;
+
+    box-shadow:
+        0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+
 nav {
-    max-width: 1200px;
-    height: 78px;
-    margin: auto;
-    padding: 0 24px;
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+    min-height: 78px;
 
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    gap: 30px;
 }
+
 
 nav > a:first-child {
-    color: white;
-    font-size: 28px;
+    font-size: 2rem;
     font-weight: 900;
-    letter-spacing: 3px;
+
+    letter-spacing: 2px;
+
+    color: #e11d16;
 }
 
-nav > div {
+
+nav div {
     display: flex;
-    gap: 28px;
+    align-items: center;
+    gap: 25px;
 }
 
-nav > div a {
-    color: white;
-    font-size: 14px;
-    font-weight: 600;
 
-    transition: 0.3s ease;
+nav div a {
+    font-size: 0.9rem;
+    font-weight: 700;
+
+    color: #344054;
+
+    transition:
+        color 0.25s ease,
+        transform 0.25s ease;
 }
 
-nav > div a:hover {
-    color: #e6b84a;
+
+nav div a:hover {
+    color: #e11d16;
+    transform: translateY(-2px);
 }
+
 
 nav > a:last-child {
-    background: #e6b84a;
-    color: #111;
+    background: #e11d16;
 
-    padding: 12px 20px;
-    border-radius: 5px;
+    color: white;
 
-    font-size: 14px;
+    padding: 12px 22px;
+
+    border-radius: 999px;
+
     font-weight: 800;
 
-    transition: 0.3s ease;
+    box-shadow:
+        0 8px 20px rgba(225, 29, 22, 0.25);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
+
 
 nav > a:last-child:hover {
-    background: white;
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 12px 28px rgba(225, 29, 22, 0.35);
 }
 
 
-/* =========================
+/* =========================================================
+   MAIN
+========================================================= */
+
+main {
+    overflow: hidden;
+}
+
+
+main > section {
+    width: min(1200px, 92%);
+
+    margin: 0 auto;
+
+    padding: 100px 0;
+}
+
+
+/* =========================================================
    HERO
-========================= */
+========================================================= */
 
 #home {
-    min-height: 760px;
+    width: 100%;
 
-    padding: 160px 24px 120px;
+    max-width: none;
+
+    min-height: 680px;
+
+    padding:
+        150px max(4%, calc((100% - 1200px) / 2))
+        120px;
 
     display: flex;
     flex-direction: column;
     justify-content: center;
 
-    color: white;
+    position: relative;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(0, 0, 0, 0.88),
-            rgba(0, 0, 0, 0.60),
-            rgba(0, 0, 0, 0.25)
+        radial-gradient(
+            circle at 80% 30%,
+            rgba(225, 29, 22, 0.16),
+            transparent 35%
         ),
-        url("https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1800&q=85")
-        center / cover no-repeat;
-}
+        linear-gradient(
+            135deg,
+            #0b1220,
+            #111827 60%,
+            #1d2635
+        );
 
-#home p:first-child {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto 20px;
-
-    color: #e6b84a;
-
-    font-size: 13px;
-    font-weight: 800;
-    letter-spacing: 3px;
-}
-
-#home h1 {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto 25px;
-
-    font-size: clamp(48px, 7vw, 88px);
-    line-height: 0.98;
-    letter-spacing: -4px;
-}
-
-#home p:nth-of-type(2) {
-    max-width: 1200px;
-    width: 100%;
-    margin: 0 auto 35px;
-
-    color: #e5e5e5;
-
-    font-size: 19px;
-}
-
-#home > a {
-    display: inline-block;
-
-    padding: 15px 25px;
-    border-radius: 5px;
-
-    font-weight: 800;
-
-    margin-right: 10px;
-}
-
-#home > a:first-of-type {
-    max-width: fit-content;
-
-    margin-left: max(0px, calc((100% - 1200px) / 2));
-
-    background: #e6b84a;
-    color: #111;
-}
-
-#home > a:last-of-type {
-    max-width: fit-content;
-
-    margin-left: max(0px, calc((100% - 1200px) / 2));
-
-    border: 1px solid rgba(255,255,255,0.5);
     color: white;
 }
 
 
-/* =========================
-   GENERAL SECTIONS
-========================= */
+#home::before {
+    content: "";
 
-main section:not(#home) {
-    padding: 100px 24px;
+    position: absolute;
+
+    width: 420px;
+    height: 420px;
+
+    right: -150px;
+    top: 80px;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+
+    box-shadow:
+        0 0 80px rgba(225, 29, 22, 0.15);
 }
 
-main section:not(#home) > * {
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+
+#home::after {
+    content: "";
+
+    position: absolute;
+
+    width: 180px;
+    height: 180px;
+
+    right: 120px;
+    bottom: 80px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(225, 29, 22, 0.45),
+            transparent 70%
+        );
+
+    filter: blur(10px);
 }
 
-main section:not(#home) > p:first-child {
-    color: #a67d20;
 
-    font-size: 13px;
+#home p:first-child {
+    color: #ffcc00;
+
+    font-size: 0.85rem;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+
+#home h1 {
+    position: relative;
+    z-index: 2;
+
+    max-width: 800px;
+
+    font-size: clamp(3.2rem, 7vw, 6.5rem);
+
+    line-height: 0.95;
+
+    font-weight: 950;
+
+    letter-spacing: -4px;
+
+    margin-bottom: 30px;
+}
+
+
+#home p:nth-of-type(2) {
+    position: relative;
+    z-index: 2;
+
+    max-width: 620px;
+
+    color: #d0d5dd;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 35px;
+}
+
+
+#home a {
+    position: relative;
+    z-index: 3;
+
+    display: inline-block;
+
+    width: fit-content;
+
+    padding: 15px 25px;
+
+    margin-right: 12px;
+
+    border-radius: 999px;
+
     font-weight: 800;
 
-    letter-spacing: 3px;
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+}
+
+
+#home a:first-of-type {
+    background: #e11d16;
+
+    color: white;
+
+    box-shadow:
+        0 10px 30px rgba(225, 29, 22, 0.3);
+}
+
+
+#home a:last-of-type {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+
+    color: white;
+}
+
+
+#home a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   BOOKING
+========================================================= */
+
+#booking {
+    margin-top: -50px;
+
+    position: relative;
+    z-index: 10;
+
+    background: white;
+
+    border-radius: 24px;
+
+    padding: 45px;
+
+    box-shadow:
+        0 25px 70px rgba(16, 24, 40, 0.12);
+
+    border: 1px solid #eaecf0;
+}
+
+
+#booking h2 {
+    font-size: 2rem;
+
+    margin-bottom: 8px;
+}
+
+
+#booking > p {
+    color: #667085;
+
+    margin-bottom: 30px;
+}
+
+
+#booking form {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr)
+        auto;
+
+    gap: 16px;
+
+    align-items: end;
+}
+
+
+#booking form div {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+#booking label {
+    font-size: 0.75rem;
+
+    font-weight: 900;
+
     text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+    color: #475467;
+}
+
+
+#booking select,
+#booking input {
+    width: 100%;
+
+    min-height: 50px;
+
+    padding: 0 14px;
+
+    border: 1px solid #d0d5dd;
+
+    border-radius: 12px;
+
+    background: white;
+
+    color: #101828;
+
+    outline: none;
+}
+
+
+#booking select:focus,
+#booking input:focus {
+    border-color: #e11d16;
+
+    box-shadow:
+        0 0 0 3px rgba(225, 29, 22, 0.1);
+}
+
+
+#booking button {
+    min-height: 50px;
+
+    padding: 0 22px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    background: #e11d16;
+
+    color: white;
+
+    font-weight: 900;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 8px 20px rgba(225, 29, 22, 0.2);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+
+#booking button:hover {
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 12px 28px rgba(225, 29, 22, 0.3);
+}
+
+
+/* =========================================================
+   SECTION HEADERS
+========================================================= */
+
+.section-header {
+    max-width: 750px;
+
+    margin-bottom: 55px;
+}
+
+
+.section-header > p:first-child,
+#services > p:first-child,
+#about > p:first-child,
+#fleet > p:first-child {
+    color: #e11d16;
+
+    font-size: 0.8rem;
+
+    font-weight: 900;
+
+    letter-spacing: 3px;
 
     margin-bottom: 12px;
 }
 
-main section:not(#home) h2 {
-    font-size: clamp(35px, 5vw, 58px);
-    line-height: 1.05;
+
+.section-header h2,
+#services h2,
+#about h2,
+#fleet h2 {
+    font-size: clamp(2.3rem, 5vw, 4rem);
+
+    line-height: 1;
 
     letter-spacing: -2px;
 
@@ -224,452 +507,765 @@ main section:not(#home) h2 {
 }
 
 
-/* =========================
-   BOOKING
-========================= */
+.section-header > p:last-child,
+#services > p:nth-of-type(2),
+#about > p:nth-of-type(2),
+#fleet > p:nth-of-type(2) {
+    color: #667085;
 
-#booking {
+    max-width: 700px;
+}
+
+
+/* =========================================================
+   ROUTES
+========================================================= */
+
+#routes {
+    position: relative;
+}
+
+
+#routes::before {
+    content: "RIMBI";
+
+    position: absolute;
+
+    right: -100px;
+    top: 150px;
+
+    font-size: 12rem;
+
+    font-weight: 950;
+
+    color: rgba(16, 24, 40, 0.025);
+
+    transform: rotate(-90deg);
+
+    pointer-events: none;
+}
+
+
+.route-card {
+    position: relative;
+
+    margin-bottom: 30px;
+
+    padding: 35px;
+
     background: white;
 
-    margin-top: -65px;
+    border: 1px solid #eaecf0;
 
-    position: relative;
-    z-index: 10;
-
-    max-width: 1150px;
-
-    padding: 30px;
-
-    border-radius: 10px;
+    border-radius: 24px;
 
     box-shadow:
-        0 15px 50px rgba(0,0,0,0.14);
+        0 15px 45px rgba(16, 24, 40, 0.06);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
 }
 
-#booking h2 {
-    font-size: 18px !important;
 
-    letter-spacing: 0 !important;
+.route-card::before {
+    content: "";
 
-    text-transform: uppercase;
+    position: absolute;
 
-    margin-bottom: 20px !important;
+    left: 0;
+    top: 0;
+
+    width: 5px;
+    height: 100%;
+
+    background: linear-gradient(
+        #e11d16,
+        #ffcc00
+    );
 }
 
-#booking form {
+
+.route-card:hover {
+    transform: translateY(-7px);
+
+    border-color: rgba(225, 29, 22, 0.3);
+
+    box-shadow:
+        0 25px 65px rgba(16, 24, 40, 0.12);
+}
+
+
+.route-card-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-bottom: 15px;
+
+    font-weight: 800;
+}
+
+
+.route-country {
+    color: #475467;
+
+    font-size: 0.9rem;
+}
+
+
+.route-arrow {
+    color: #e11d16;
+
+    font-size: 1.5rem;
+
+    font-weight: 900;
+}
+
+
+.route-card h3 {
+    font-size: 2rem;
+
+    letter-spacing: -1px;
+
+    margin-bottom: 10px;
+}
+
+
+.route-frequency {
+    display: inline-block;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background: #fff4f3;
+
+    color: #e11d16;
+
+    font-size: 0.72rem;
+
+    font-weight: 900;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 25px;
+}
+
+
+.route-details {
     display: grid;
 
-    grid-template-columns:
-        1fr 1fr 1fr 0.7fr auto;
+    grid-template-columns: repeat(2, 180px);
 
-    gap: 12px;
+    gap: 20px;
 
-    align-items: end;
+    margin-bottom: 25px;
 }
 
-#booking label {
+
+.route-detail {
+    padding: 18px;
+
+    background: #f8fafc;
+
+    border-radius: 14px;
+
+    border: 1px solid #eaecf0;
+}
+
+
+.route-detail span {
     display: block;
 
-    font-size: 11px;
+    color: #667085;
 
-    color: #777;
+    font-size: 0.75rem;
 
     text-transform: uppercase;
 
-    font-weight: 700;
+    letter-spacing: 1px;
+
+    font-weight: 800;
 
     margin-bottom: 5px;
 }
 
-#booking select,
-#booking input {
-    width: 100%;
 
-    padding: 14px;
-
-    border: 1px solid #ddd;
-
-    border-radius: 5px;
-
-    background: #fafafa;
-
-    font-size: 14px;
-
-    outline: none;
-}
-
-#booking button {
-    border: none;
-
-    background: #111;
-    color: white;
-
-    padding: 15px 25px;
-
-    border-radius: 5px;
-
-    font-weight: 800;
-
-    cursor: pointer;
-
-    transition: 0.3s;
-}
-
-#booking button:hover {
-    background: #e6b84a;
-    color: #111;
+.route-detail strong {
+    font-size: 1.25rem;
 }
 
 
-/* =========================
-   ROUTES
-========================= */
+.route-location {
+    padding: 20px 0;
 
-#routes {
-    background: white;
+    border-top: 1px solid #eaecf0;
 
-    padding-top: 130px !important;
-}
-
-#routes > p:nth-of-type(2) {
-    color: #666;
-
-    font-size: 17px;
-
-    margin-bottom: 45px;
-}
-
-#routes article {
-    display: inline-block;
-
-    vertical-align: top;
-
-    width: calc(33.333% - 16px);
-
-    margin-right: 18px;
-
-    padding: 30px;
-
-    border: 1px solid #e3e3e3;
-
-    border-radius: 10px;
-
-    transition: 0.3s ease;
-}
-
-#routes article:last-child {
-    margin-right: 0;
-}
-
-#routes article:hover {
-    transform: translateY(-6px);
-
-    box-shadow:
-        0 15px 35px rgba(0,0,0,0.08);
-}
-
-#routes article h3 {
-    font-size: 23px;
-
-    margin-bottom: 12px;
-}
-
-#routes article p {
-    color: #777;
-
-    font-size: 14px;
+    border-bottom: 1px solid #eaecf0;
 
     margin-bottom: 20px;
 }
 
-#routes article a {
-    color: #a67d20;
 
-    font-weight: 800;
+.route-location strong {
+    display: block;
 
-    font-size: 14px;
+    margin-bottom: 5px;
 }
 
 
-/* =========================
-   SERVICES
-========================= */
+.route-location p {
+    color: #667085;
+}
 
-#services {
-    background: #111;
+
+.route-features {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+
+.route-features span {
+    padding: 8px 12px;
+
+    background: #f2f4f7;
+
+    border-radius: 999px;
+
+    color: #344054;
+
+    font-size: 0.78rem;
+
+    font-weight: 700;
+}
+
+
+.route-button {
+    display: inline-block;
+
+    padding: 13px 20px;
+
+    background: #101828;
+
+    color: white;
+
+    border-radius: 10px;
+
+    font-weight: 800;
+
+    transition:
+        background 0.25s ease,
+        transform 0.25s ease;
+}
+
+
+.route-button:hover {
+    background: #e11d16;
+
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   ROUTE NOTE
+========================================================= */
+
+.route-note {
+    margin-top: 45px;
+
+    padding: 35px;
+
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #101828,
+            #1d2939
+        );
 
     color: white;
 }
 
-#services > p:nth-of-type(2) {
-    color: #aaa;
 
-    font-size: 17px;
+.route-note h3 {
+    font-size: 1.7rem;
 
-    margin-bottom: 45px;
+    margin-bottom: 10px;
 }
 
-#services article {
+
+.route-note p {
+    max-width: 700px;
+
+    color: #d0d5dd;
+
+    margin-bottom: 20px;
+}
+
+
+.route-note a {
     display: inline-block;
 
-    vertical-align: top;
+    padding: 12px 20px;
 
-    width: calc(33.333% - 16px);
+    border-radius: 999px;
 
-    margin-right: 18px;
+    background: #ffcc00;
 
-    padding: 35px;
+    color: #101828;
 
-    border: 1px solid #333;
-
-    border-radius: 10px;
-
-    transition: 0.3s;
-}
-
-#services article:last-child {
-    margin-right: 0;
-}
-
-#services article:hover {
-    border-color: #e6b84a;
-
-    transform: translateY(-5px);
-}
-
-#services article h3 {
-    font-size: 22px;
-
-    margin-bottom: 12px;
-}
-
-#services article p {
-    color: #aaa;
-
-    font-size: 15px;
+    font-weight: 900;
 }
 
 
-/* =========================
-   ABOUT / WHY RIMBI
-========================= */
+/* =========================================================
+   SERVICES
+========================================================= */
 
-#about {
-    background: #f7f7f5;
+#services {
+    background: #fff;
 }
 
-#about > p:nth-of-type(2) {
-    color: #666;
 
-    font-size: 17px;
-
-    margin-bottom: 45px;
-}
-
+#services article,
 #about article {
     display: inline-block;
 
     vertical-align: top;
 
-    width: calc(25% - 18px);
+    width: calc(50% - 15px);
 
-    margin-right: 18px;
+    margin-top: 35px;
 
-    padding: 25px 0;
+    padding: 30px;
 
-    border-top: 2px solid #ddd;
+    background: white;
+
+    border: 1px solid #eaecf0;
+
+    border-radius: 20px;
+
+    box-shadow:
+        0 10px 30px rgba(16, 24, 40, 0.04);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
 }
 
-#about article:last-child {
-    margin-right: 0;
+
+#services article:nth-of-type(odd),
+#about article:nth-of-type(odd) {
+    margin-right: 20px;
 }
 
+
+#services article:hover,
+#about article:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 18px 40px rgba(16, 24, 40, 0.08);
+}
+
+
+#services article h3,
 #about article h3 {
-    font-size: 20px;
+    font-size: 1.35rem;
 
     margin-bottom: 10px;
 }
 
-#about article p {
-    color: #777;
 
-    font-size: 14px;
+#services article p,
+#about article p {
+    color: #667085;
 }
 
 
-/* =========================
+/* =========================================================
+   ABOUT
+========================================================= */
+
+#about {
+    background: #f2f4f7;
+}
+
+
+#about article {
+    background: white;
+}
+
+
+/* =========================================================
    FLEET
-========================= */
+========================================================= */
 
 #fleet {
-    background: #e9e9e5;
+    position: relative;
 
-    min-height: 500px;
+    min-height: 450px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff7ed,
+            #ffffff
+        );
 }
 
-#fleet > p:nth-of-type(2) {
-    color: #666;
 
-    font-size: 17px;
+#fleet::after {
+    content: "RIMBI";
 
-    max-width: 650px;
+    position: absolute;
+
+    right: 5%;
+
+    bottom: 20px;
+
+    font-size: clamp(5rem, 14vw, 12rem);
+
+    font-weight: 950;
+
+    color: rgba(225, 29, 22, 0.05);
+
+    pointer-events: none;
 }
 
 
-/* =========================
+#fleet p {
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
    CTA
-========================= */
+========================================================= */
 
-main > section:last-of-type {
-    background: #e6b84a;
+#contact-cta {
+    width: 100%;
+
+    max-width: none;
+
+    padding:
+        100px max(4%, calc((100% - 1200px) / 2));
+
+    background:
+        linear-gradient(
+            135deg,
+            #e11d16,
+            #a50f0b
+        );
+
+    color: white;
 
     text-align: center;
 }
 
-main > section:last-of-type h2 {
-    max-width: none !important;
 
-    font-size: clamp(40px, 6vw, 65px) !important;
+#contact-cta h2 {
+    font-size: clamp(2.5rem, 5vw, 4.5rem);
+
+    line-height: 1;
+
+    letter-spacing: -2px;
+
+    margin-bottom: 20px;
 }
 
-main > section:last-of-type p {
-    color: #40361f;
+
+#contact-cta p {
+    color: #ffe4e2;
 
     margin-bottom: 30px;
 }
 
-main > section:last-of-type a {
+
+#contact-cta a {
     display: inline-block;
 
-    background: #111;
-    color: white;
+    padding: 15px 25px;
 
-    padding: 16px 30px;
+    border-radius: 999px;
 
-    border-radius: 5px;
+    background: white;
 
-    font-weight: 800;
+    color: #e11d16;
+
+    font-weight: 900;
+
+    transition:
+        transform 0.25s ease;
 }
 
 
-/* =========================
+#contact-cta a:hover {
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
    FOOTER
-========================= */
+========================================================= */
 
 footer {
-    background: #090909;
+    padding:
+        70px max(4%, calc((100% - 1200px) / 2));
+
+    background: #0b1220;
 
     color: white;
-
-    padding: 70px 24px 30px;
 }
+
 
 footer h2 {
-    font-size: 28px;
+    color: #ffcc00;
 
-    letter-spacing: 3px;
+    font-size: 2rem;
 
-    margin-bottom: 12px;
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
 }
 
-footer p {
-    color: #999;
-
-    max-width: 500px;
-
-    margin-bottom: 10px;
-}
 
 footer h3 {
-    color: white;
-
     margin-top: 30px;
+
     margin-bottom: 10px;
 }
 
 
-/* =========================
-   RESPONSIVE
-========================= */
+footer p {
+    color: #98a2b3;
+
+    margin-bottom: 8px;
+}
+
+
+footer p:last-child {
+    margin-top: 35px;
+
+    padding-top: 20px;
+
+    border-top: 1px solid #344054;
+
+    font-size: 0.85rem;
+}
+
+
+/* =========================================================
+   RESPONSIVE — TABLET
+========================================================= */
 
 @media (max-width: 900px) {
 
-    nav > div {
-        display: none;
+
+    nav {
+        flex-wrap: wrap;
+
+        padding: 15px 0;
     }
+
+
+    nav div {
+        order: 3;
+
+        width: 100%;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 15px;
+    }
+
 
     #booking form {
-        grid-template-columns: 1fr 1fr;
+        grid-template-columns:
+            repeat(2, 1fr);
     }
 
-    #routes article,
-    #services article {
-        width: calc(50% - 12px);
 
-        margin-bottom: 20px;
+    #booking button {
+        width: 100%;
     }
 
-    #about article {
-        width: calc(50% - 12px);
 
-        margin-bottom: 20px;
+    .route-details {
+        grid-template-columns:
+            repeat(2, 1fr);
     }
+
 }
 
 
+/* =========================================================
+   RESPONSIVE — MOBILE
+========================================================= */
+
 @media (max-width: 600px) {
 
-    nav {
-        height: 70px;
+
+    main > section {
+        padding: 70px 0;
     }
+
+
+    nav {
+        width: 90%;
+    }
+
 
     nav > a:first-child {
-        font-size: 23px;
+        font-size: 1.6rem;
     }
+
 
     nav > a:last-child {
-        padding: 10px 14px;
+        padding: 10px 15px;
+
+        font-size: 0.8rem;
     }
+
+
+    nav div {
+        gap: 10px;
+    }
+
+
+    nav div a {
+        font-size: 0.75rem;
+    }
+
 
     #home {
-        min-height: 680px;
+        min-height: 620px;
 
-        padding-top: 130px;
+        padding:
+            110px 6%
+            90px;
     }
 
+
     #home h1 {
-        font-size: 50px;
+        font-size: 3.5rem;
 
         letter-spacing: -2px;
     }
 
-    #home > a {
+
+    #home p:nth-of-type(2) {
+        font-size: 1rem;
+    }
+
+
+    #home a {
         display: block;
 
-        margin-left: 0 !important;
+        width: 100%;
 
-        margin-bottom: 12px;
+        text-align: center;
+
+        margin:
+            0 0 12px;
     }
+
 
     #booking {
-        margin: 20px 15px 0;
+        width: 92%;
 
-        padding: 20px;
+        padding: 28px;
+
+        margin-top: -35px;
     }
+
 
     #booking form {
         grid-template-columns: 1fr;
     }
 
-    #routes article,
+
+    .section-header h2,
+    #services h2,
+    #about h2,
+    #fleet h2 {
+        font-size: 2.5rem;
+    }
+
+
+    .route-card {
+        padding: 25px;
+    }
+
+
+    .route-card h3 {
+        font-size: 1.6rem;
+    }
+
+
+    .route-details {
+        grid-template-columns: 1fr;
+    }
+
+
+    .route-features {
+        gap: 7px;
+    }
+
+
+    .route-features span {
+        font-size: 0.7rem;
+    }
+
+
     #services article,
     #about article {
+        display: block;
+
         width: 100%;
 
+        margin:
+            20px 0 0;
+    }
+
+
+    #services article:nth-of-type(odd),
+    #about article:nth-of-type(odd) {
         margin-right: 0;
     }
 
-    main section:not(#home) {
-        padding: 75px 20px;
+
+    #contact-cta {
+        padding:
+            80px 6%;
     }
+
+
+    #contact-cta h2 {
+        font-size: 2.7rem;
+    }
+
+
 }
