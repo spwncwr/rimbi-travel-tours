@@ -9,18 +9,19 @@
 
     <meta
         name="description"
-        content="Rimbi Travel & Tours — reliable travel, passenger transport, private coach hire and shuttle services."
+        content="Rimbi Travel & Tours provides passenger transportation connecting Zimbabwe, Malawi and Tanzania."
     >
 
     <!-- Connect CSS -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
+
 <body>
 
-    <!-- =========================
+    <!-- ==================================================
          HEADER
-    ========================== -->
+    =================================================== -->
 
     <header>
 
@@ -30,21 +31,35 @@
                 RIMBI
             </a>
 
+
             <div>
 
-                <a href="#home">Home</a>
+                <a href="#home">
+                    Home
+                </a>
 
-                <a href="#routes">Routes</a>
+                <a href="#routes">
+                    Routes
+                </a>
 
-                <a href="#services">Services</a>
+                <a href="#services">
+                    Services
+                </a>
 
-                <a href="#fleet">Fleet</a>
+                <a href="#fleet">
+                    Fleet
+                </a>
 
-                <a href="#about">About</a>
+                <a href="#about">
+                    About
+                </a>
 
-                <a href="#contact">Contact</a>
+                <a href="#contact">
+                    Contact
+                </a>
 
             </div>
+
 
             <a href="#booking">
                 Book Now
@@ -55,16 +70,17 @@
     </header>
 
 
-    <!-- =========================
+
+    <!-- ==================================================
          MAIN CONTENT
-    ========================== -->
+    =================================================== -->
 
     <main>
 
 
-        <!-- =========================
-             HERO
-        ========================== -->
+        <!-- ==================================================
+             HERO SECTION
+        =================================================== -->
 
         <section id="home">
 
@@ -72,18 +88,22 @@
                 RIMBI TRAVEL & TOURS
             </p>
 
+
             <h1>
                 Travel Beyond Boundaries.
             </h1>
+
 
             <p>
                 Reliable journeys. Comfortable travel.
                 Professional service.
             </p>
 
+
             <a href="#booking">
                 Book Your Journey
             </a>
+
 
             <a href="#routes">
                 Explore Routes
@@ -92,9 +112,10 @@
         </section>
 
 
-        <!-- =========================
-             BOOKING
-        ========================== -->
+
+        <!-- ==================================================
+             JOURNEY SEARCH / BOOKING
+        =================================================== -->
 
         <section id="booking">
 
@@ -102,7 +123,17 @@
                 Find Your Journey
             </h2>
 
+
+            <p>
+                Choose your departure city, destination
+                and travel date.
+            </p>
+
+
             <form>
+
+
+                <!-- FROM -->
 
                 <div>
 
@@ -110,24 +141,39 @@
                         From
                     </label>
 
-                    <select id="from" name="from">
+
+                    <select
+                        id="from"
+                        name="from"
+                        required
+                    >
+
+                        <option value="">
+                            Select departure
+                        </option>
+
 
                         <option value="harare">
                             Harare
                         </option>
 
-                        <option value="mutare">
-                            Mutare
+
+                        <option value="lilongwe">
+                            Lilongwe
                         </option>
 
-                        <option value="rushinga">
-                            Rushinga
+
+                        <option value="dar-es-salaam">
+                            Dar es Salaam
                         </option>
 
                     </select>
 
                 </div>
 
+
+
+                <!-- TO -->
 
                 <div>
 
@@ -135,18 +181,30 @@
                         To
                     </label>
 
-                    <select id="to" name="to">
 
-                        <option value="mutare">
-                            Mutare
+                    <select
+                        id="to"
+                        name="to"
+                        required
+                    >
+
+                        <option value="">
+                            Select destination
                         </option>
+
 
                         <option value="harare">
                             Harare
                         </option>
 
-                        <option value="rushinga">
-                            Rushinga
+
+                        <option value="lilongwe">
+                            Lilongwe
+                        </option>
+
+
+                        <option value="dar-es-salaam">
+                            Dar es Salaam
                         </option>
 
                     </select>
@@ -154,20 +212,28 @@
                 </div>
 
 
+
+                <!-- TRAVEL DATE -->
+
                 <div>
 
                     <label for="date">
                         Travel Date
                     </label>
 
+
                     <input
                         type="date"
                         id="date"
                         name="date"
+                        required
                     >
 
                 </div>
 
+
+
+                <!-- PASSENGERS -->
 
                 <div>
 
@@ -175,117 +241,665 @@
                         Passengers
                     </label>
 
+
                     <input
                         type="number"
                         id="passengers"
                         name="passengers"
-                        value="1"
                         min="1"
+                        value="1"
+                        required
                     >
 
                 </div>
 
 
+
+                <!-- SEARCH BUTTON -->
+
                 <button type="submit">
                     Search Journey
                 </button>
+
 
             </form>
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              ROUTES
-        ========================== -->
+        =================================================== -->
 
         <section id="routes">
 
-            <p>
-                POPULAR ROUTES
-            </p>
 
-            <h2>
-                Where are you going?
-            </h2>
+            <!-- ROUTES HEADER -->
 
-            <p>
-                Explore selected routes associated with
-                Rimbi Travel & Tours.
-            </p>
-
-
-            <article>
-
-                <h3>
-                    Harare → Mutare
-                </h3>
+            <div class="section-header">
 
                 <p>
-                    Regular passenger service.
+                    OUR ROUTES
                 </p>
 
-                <a href="#booking">
-                    Book this route
+
+                <h2>
+                    Travel Across Borders.
+                </h2>
+
+
+                <p>
+                    Explore Rimbi Travel & Tours
+                    international bus services connecting
+                    Zimbabwe, Malawi and Tanzania.
+                </p>
+
+            </div>
+
+
+
+            <!-- ==================================================
+                 HARARE → LILONGWE
+            =================================================== -->
+
+            <article class="route-card">
+
+
+                <div class="route-card-header">
+
+                    <span class="route-country">
+                        🇿🇼 Zimbabwe
+                    </span>
+
+
+                    <span class="route-arrow">
+                        →
+                    </span>
+
+
+                    <span class="route-country">
+                        🇲🇼 Malawi
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Harare → Lilongwe
+                </h3>
+
+
+                <p class="route-frequency">
+                    DAILY SERVICE · SUNDAY – SATURDAY
+                </p>
+
+
+
+                <div class="route-details">
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Check-in
+                        </span>
+
+
+                        <strong>
+                            6:30 AM
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Departure
+                        </span>
+
+
+                        <strong>
+                            7:00 AM
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="route-location">
+
+                    <strong>
+                        Departure Point
+                    </strong>
+
+
+                    <p>
+                        Roadport Depot, 4th Street,
+                        Harare, Zimbabwe
+                    </p>
+
+                </div>
+
+
+
+                <div class="route-features">
+
+                    <span>
+                        ✓ Free Wi-Fi
+                    </span>
+
+
+                    <span>
+                        ✓ Free Snacks
+                    </span>
+
+
+                    <span>
+                        ✓ Luggage Courier
+                    </span>
+
+
+                    <span>
+                        ✓ Reclining Seats
+                    </span>
+
+
+                    <span>
+                        ✓ Charging Ports
+                    </span>
+
+
+                    <span>
+                        ✓ TV Sets
+                    </span>
+
+                </div>
+
+
+
+                <a
+                    href="#booking"
+                    class="route-button"
+                >
+                    Book Harare → Lilongwe
                 </a>
+
 
             </article>
 
 
-            <article>
+
+            <!-- ==================================================
+                 LILONGWE → HARARE
+            =================================================== -->
+
+            <article class="route-card">
+
+
+                <div class="route-card-header">
+
+                    <span class="route-country">
+                        🇲🇼 Malawi
+                    </span>
+
+
+                    <span class="route-arrow">
+                        →
+                    </span>
+
+
+                    <span class="route-country">
+                        🇿🇼 Zimbabwe
+                    </span>
+
+                </div>
+
 
                 <h3>
-                    Mutare → Harare
+                    Lilongwe → Harare
                 </h3>
 
-                <p>
-                    Regular passenger service.
+
+                <p class="route-frequency">
+                    DAILY SERVICE · SUNDAY – SATURDAY
                 </p>
 
-                <a href="#booking">
-                    Book this route
+
+
+                <div class="route-details">
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Check-in
+                        </span>
+
+
+                        <strong>
+                            5:30 AM
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Departure
+                        </span>
+
+
+                        <strong>
+                            6:00 AM
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="route-location">
+
+                    <strong>
+                        Departure Point
+                    </strong>
+
+
+                    <p>
+                        Grand Business Park, Unit B3,
+                        Lilongwe, Malawi
+                    </p>
+
+                </div>
+
+
+
+                <div class="route-features">
+
+                    <span>
+                        ✓ Free Wi-Fi
+                    </span>
+
+
+                    <span>
+                        ✓ Free Snacks
+                    </span>
+
+
+                    <span>
+                        ✓ Luggage Courier
+                    </span>
+
+
+                    <span>
+                        ✓ Reclining Seats
+                    </span>
+
+
+                    <span>
+                        ✓ Charging Ports
+                    </span>
+
+
+                    <span>
+                        ✓ TV Sets
+                    </span>
+
+                </div>
+
+
+
+                <a
+                    href="#booking"
+                    class="route-button"
+                >
+                    Book Lilongwe → Harare
                 </a>
+
 
             </article>
 
 
-            <article>
+
+            <!-- ==================================================
+                 HARARE → DAR ES SALAAM
+            =================================================== -->
+
+            <article class="route-card">
+
+
+                <div class="route-card-header">
+
+                    <span class="route-country">
+                        🇿🇼 Zimbabwe
+                    </span>
+
+
+                    <span class="route-arrow">
+                        →
+                    </span>
+
+
+                    <span class="route-country">
+                        🇹🇿 Tanzania
+                    </span>
+
+                </div>
+
 
                 <h3>
-                    Harare → Rushinga
+                    Harare → Dar es Salaam
                 </h3>
 
-                <p>
-                    Regular passenger service.
+
+                <p class="route-frequency">
+                    WEEKLY SERVICE · FRIDAY
                 </p>
 
-                <a href="#booking">
-                    Book this route
+
+
+                <div class="route-details">
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Check-in
+                        </span>
+
+
+                        <strong>
+                            6:00 AM
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Departure
+                        </span>
+
+
+                        <strong>
+                            6:30 AM
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="route-location">
+
+                    <strong>
+                        Departure Point
+                    </strong>
+
+
+                    <p>
+                        Roadport Depot, 4th Street,
+                        Harare, Zimbabwe
+                    </p>
+
+                </div>
+
+
+
+                <div class="route-features">
+
+                    <span>
+                        ✓ Free Wi-Fi
+                    </span>
+
+
+                    <span>
+                        ✓ Free Snacks
+                    </span>
+
+
+                    <span>
+                        ✓ Luggage Courier
+                    </span>
+
+
+                    <span>
+                        ✓ Reclining Seats
+                    </span>
+
+
+                    <span>
+                        ✓ Charging Ports
+                    </span>
+
+
+                    <span>
+                        ✓ TV Sets
+                    </span>
+
+                </div>
+
+
+
+                <a
+                    href="#booking"
+                    class="route-button"
+                >
+                    Book Harare → Dar es Salaam
                 </a>
 
+
             </article>
+
+
+
+            <!-- ==================================================
+                 DAR ES SALAAM → HARARE
+            =================================================== -->
+
+            <article class="route-card">
+
+
+                <div class="route-card-header">
+
+                    <span class="route-country">
+                        🇹🇿 Tanzania
+                    </span>
+
+
+                    <span class="route-arrow">
+                        →
+                    </span>
+
+
+                    <span class="route-country">
+                        🇿🇼 Zimbabwe
+                    </span>
+
+                </div>
+
+
+                <h3>
+                    Dar es Salaam → Harare
+                </h3>
+
+
+                <p class="route-frequency">
+                    WEEKLY SERVICE · TUESDAY
+                </p>
+
+
+
+                <div class="route-details">
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Check-in
+                        </span>
+
+
+                        <strong>
+                            5:00 PM
+                        </strong>
+
+                    </div>
+
+
+
+                    <div class="route-detail">
+
+                        <span>
+                            Departure
+                        </span>
+
+
+                        <strong>
+                            7:00 PM
+                        </strong>
+
+                    </div>
+
+
+                </div>
+
+
+
+                <div class="route-location">
+
+                    <strong>
+                        Departure Point
+                    </strong>
+
+
+                    <p>
+                        Corner Narungombe Street,
+                        next to Rising Sun Hotel,
+                        opposite Hong Kong Hotel,
+                        Kariakoo, Dar es Salaam
+                    </p>
+
+                </div>
+
+
+
+                <div class="route-features">
+
+                    <span>
+                        ✓ Free Wi-Fi
+                    </span>
+
+
+                    <span>
+                        ✓ Free Snacks
+                    </span>
+
+
+                    <span>
+                        ✓ Luggage Courier
+                    </span>
+
+
+                    <span>
+                        ✓ Reclining Seats
+                    </span>
+
+
+                    <span>
+                        ✓ Charging Ports
+                    </span>
+
+
+                    <span>
+                        ✓ TV Sets
+                    </span>
+
+                </div>
+
+
+
+                <a
+                    href="#booking"
+                    class="route-button"
+                >
+                    Book Dar es Salaam → Harare
+                </a>
+
+
+            </article>
+
+
+
+            <!-- ==================================================
+                 ROUTE INFORMATION
+            =================================================== -->
+
+            <div class="route-note">
+
+
+                <h3>
+                    Need help planning your journey?
+                </h3>
+
+
+                <p>
+                    Check your preferred route, departure
+                    day and departure location before
+                    travelling. Contact Rimbi Travel &
+                    Tours for booking and additional
+                    journey information.
+                </p>
+
+
+                <a href="#contact">
+                    Contact Rimbi
+                </a>
+
+
+            </div>
+
 
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              SERVICES
-        ========================== -->
+        =================================================== -->
 
         <section id="services">
+
 
             <p>
                 OUR SERVICES
             </p>
 
+
             <h2>
                 Transport built around you.
             </h2>
+
 
             <p>
                 Flexible transportation solutions for
                 individuals, companies and groups.
             </p>
+
 
 
             <article>
@@ -294,11 +908,14 @@
                     Public Bus Service
                 </h3>
 
+
                 <p>
-                    Passenger transportation on selected routes.
+                    Passenger transportation on selected
+                    international routes.
                 </p>
 
             </article>
+
 
 
             <article>
@@ -306,6 +923,7 @@
                 <h3>
                     Private Coach Hire
                 </h3>
+
 
                 <p>
                     Private transportation for companies,
@@ -315,11 +933,13 @@
             </article>
 
 
+
             <article>
 
                 <h3>
                     Shuttle Services
                 </h3>
+
 
                 <p>
                     Flexible transportation solutions
@@ -328,22 +948,43 @@
 
             </article>
 
+
+
+            <article>
+
+                <h3>
+                    Luggage Courier
+                </h3>
+
+
+                <p>
+                    Luggage courier services are available
+                    on selected journeys.
+                </p>
+
+            </article>
+
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              WHY RIMBI
-        ========================== -->
+        =================================================== -->
 
         <section id="about">
+
 
             <p>
                 WHY RIMBI
             </p>
 
+
             <h2>
                 More than a journey.
             </h2>
+
 
             <p>
                 Rimbi Travel & Tours focuses on dependable
@@ -351,11 +992,13 @@
             </p>
 
 
+
             <article>
 
                 <h3>
                     Safety
                 </h3>
+
 
                 <p>
                     A strong focus on passenger and
@@ -365,11 +1008,13 @@
             </article>
 
 
+
             <article>
 
                 <h3>
                     Professional Service
                 </h3>
+
 
                 <p>
                     Professional transportation services
@@ -379,18 +1024,22 @@
             </article>
 
 
+
             <article>
 
                 <h3>
-                    Fleet Monitoring
+                    Passenger Comfort
                 </h3>
 
+
                 <p>
-                    Vehicle monitoring technology supports
-                    operational visibility.
+                    Selected journeys offer reclining
+                    seats, charging ports, Wi-Fi and
+                    entertainment features.
                 </p>
 
             </article>
+
 
 
             <article>
@@ -399,6 +1048,7 @@
                     Customer Focus
                 </h3>
 
+
                 <p>
                     Transport solutions designed around
                     passenger needs.
@@ -406,90 +1056,119 @@
 
             </article>
 
+
         </section>
 
 
-        <!-- =========================
+
+        <!-- ==================================================
              FLEET
-        ========================== -->
+        =================================================== -->
 
         <section id="fleet">
+
 
             <p>
                 OUR FLEET
             </p>
 
+
             <h2>
                 Built for the road.
             </h2>
+
 
             <p>
                 Rimbi provides bus and coach transportation
                 for passenger and group travel.
             </p>
 
+
+            <p>
+                Modern passenger journeys are supported
+                by onboard amenities including Wi-Fi,
+                snacks, charging ports and reclining seats
+                on selected services.
+            </p>
+
+
         </section>
 
 
-        <!-- =========================
-             CTA
-        ========================== -->
 
-        <section>
+        <!-- ==================================================
+             CALL TO ACTION
+        =================================================== -->
+
+        <section id="contact-cta">
+
 
             <h2>
                 Your journey starts here.
             </h2>
+
 
             <p>
                 Planning your next trip?
                 Get in touch with Rimbi Travel & Tours.
             </p>
 
+
             <a href="#contact">
                 Contact Rimbi
             </a>
 
+
         </section>
+
 
     </main>
 
 
-    <!-- =========================
+
+    <!-- ==================================================
          FOOTER
-    ========================== -->
+    =================================================== -->
 
     <footer id="contact">
+
 
         <h2>
             RIMBI
         </h2>
+
 
         <p>
             Travel Beyond Boundaries.
         </p>
 
 
+
         <h3>
             Contact
         </h3>
+
 
         <p>
             8 Orme Road, New Ardbennie,
             Harare, Zimbabwe
         </p>
 
+
         <p>
             +263 715 159 986
         </p>
+
 
         <p>
             +263 772 998 793
         </p>
 
+
         <p>
             info@rimbitours.co.zw
         </p>
+
 
 
         <p>
@@ -497,7 +1176,9 @@
             All rights reserved.
         </p>
 
+
     </footer>
+
 
 </body>
 
