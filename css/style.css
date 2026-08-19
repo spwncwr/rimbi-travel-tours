@@ -1558,3 +1558,146 @@ footer p:last-child {
     }
 
 }
+/* =========================================================
+   RIMBI JOURNEY NETWORK
+========================================================= */
+
+#network {
+    padding: 5rem 1.5rem;
+}
+
+#network > p:first-child {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+#network h2 {
+    margin: 0.5rem 0 1rem;
+}
+
+#network > p:nth-child(3) {
+    max-width: 650px;
+    margin-bottom: 3rem;
+}
+
+
+/* NETWORK MAP */
+
+.network-map {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 3rem 0;
+    padding: 2rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 20px;
+    background: #f8fafc;
+    overflow-x: auto;
+}
+
+.network-city {
+    min-width: 150px;
+    padding: 1.5rem;
+    text-align: center;
+    border: 1px solid #e5e7eb;
+    border-radius: 16px;
+    background: #ffffff;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.network-city .country {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+}
+
+.network-city strong {
+    display: block;
+    font-size: 1.1rem;
+}
+
+.network-city small {
+    display: block;
+    margin-top: 0.25rem;
+    font-size: 0.8rem;
+}
+
+.network-line {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 60px;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+
+/* NETWORK ROUTES */
+
+.network-routes {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.network-routes article {
+    padding: 1.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #ffffff;
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.network-routes article:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08);
+}
+
+.network-routes article > span {
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.network-routes h3 {
+    margin: 0.6rem 0;
+    font-size: 1.3rem;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #network {
+        padding: 4rem 1rem;
+    }
+
+    .network-map {
+        justify-content: flex-start;
+    }
+
+    .network-routes {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .network-map {
+        padding: 1.25rem;
+    }
+
+    .network-city {
+        min-width: 125px;
+        padding: 1rem;
+    }
+
+}
