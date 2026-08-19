@@ -1413,3 +1413,148 @@ footer p:last-child {
     }
 
 }
+/* =========================================================
+   JOURNEY STATUS
+========================================================= */
+
+#journey-status {
+    padding: 5rem 1.5rem;
+}
+
+#journey-status > p:first-child {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+}
+
+#journey-status h2 {
+    margin: 0.5rem 0 1rem;
+}
+
+#journey-status > p:nth-child(3) {
+    max-width: 650px;
+    margin-bottom: 2.5rem;
+}
+
+
+/* STATUS GRID */
+
+.status-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+
+/* STATUS CARD */
+
+.status-card {
+    position: relative;
+    padding: 1.75rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 18px;
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.status-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.10);
+}
+
+
+/* STATUS INDICATOR */
+
+.status-indicator {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.25rem;
+    padding: 0.4rem 0.75rem;
+    border-radius: 999px;
+    background: #eefbf3;
+    color: #16834a;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.status-indicator span {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #16834a;
+    box-shadow: 0 0 0 4px rgba(22, 131, 74, 0.12);
+}
+
+
+/* ROUTE TITLE */
+
+.status-card h3 {
+    margin-bottom: 0.4rem;
+    font-size: 1.3rem;
+}
+
+.status-card > p {
+    margin-bottom: 1.5rem;
+}
+
+
+/* STATUS DETAILS */
+
+.status-details {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.status-details > div {
+    padding: 1rem;
+    border-radius: 12px;
+    background: #f7f8fa;
+}
+
+.status-details span {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+.status-details strong {
+    font-size: 1rem;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+    #journey-status {
+        padding: 4rem 1rem;
+    }
+
+    .status-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media (max-width: 480px) {
+
+    .status-card {
+        padding: 1.25rem;
+    }
+
+    .status-details {
+        grid-template-columns: 1fr;
+    }
+
+}
